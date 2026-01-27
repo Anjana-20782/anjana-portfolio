@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-// Changed from Fa6 to Fa to match your imports
+import DotGrid from "./DotGrid"; // Ensure you have created this file
 import { 
   FaCode, FaLayerGroup, FaServer, FaDatabase, 
-  FaLock, FaRocket, FaTerminal, FaPuzzlePiece, FaCloudUploadAlt, FaTools 
+  FaLock, FaRocket, FaTerminal, FaPuzzlePiece 
 } from "react-icons/fa";
 
 const services = [
@@ -54,16 +54,27 @@ export default function Services() {
   return (
     <section id="services" className="py-20 px-6 md:px-20 relative overflow-hidden bg-[color:var(--background)]">
       
-      {/* Background Gradient Glow - Matches your Hero section exactly */}
+      {/* 1. ADDED DOT GRID BACKGROUND (Stays behind everything) */}
+      <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
+        <DotGrid
+          dotSize={3}
+          gap={20}
+          baseColor="#6366f1" 
+          activeColor="#d946ef"
+          proximity={100}
+        />
+      </div>
+
+      {/* Background Gradient Glows - Kept as requested */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/15 blur-[130px] rounded-full -z-10" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-600/10 blur-[130px] rounded-full -z-10" />
 
-      <div className="text-center mb-16">
+      <div className="text-center mb-16 relative z-10">
         <h2 className="text-purple-500 font-bold tracking-widest uppercase text-2xl mb-2">My Services</h2>
         <h3 className="text-xl md:text-xl font-serif text-[color:var(--foreground)]">What I Do</h3>
       </div>
 
-      {/* Grid: 1 column mobile, 2 columns tablet, 4 columns desktop */}
+      {/* Grid container kept at relative z-10 so cards are above the dots */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
         {services.map((service, index) => (
           <div 
