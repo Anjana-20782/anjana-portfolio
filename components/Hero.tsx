@@ -18,3 +18,21 @@ export default function Hero() {
           priority
         />
       </div>
+
+      {/* Animated Intro */}
+      <BlurText
+        text="Hi! I'm Anjana"
+        delay={100}
+        animateBy="words"
+        direction="bottom"
+        className="text-[color:var(--muted)] mb-6 text-lg"
+      />
+
+      {/* Animated Main Heading */}
+      <BlurText
+        text="MERN Stack Developer"
+        delay={150}
+        animateBy="words"
+        direction="top"
+        className="text-5xl md:text-6xl font-serif leading-tight"
+      />
