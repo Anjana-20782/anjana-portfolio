@@ -52,6 +52,15 @@ export default function Hero() {
         />
       </div>
 
-     
+      <div className="flex gap-4 mt-10">
+        <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full hover:opacity-90 transition">
+          Contact me →
+        </button>
+
+        <button className="border border-[color:var(--border)] px-6 py-3 rounded-full hover:bg-white/5 transition">
+          My resume ⬇
+        </button>
+      </div>
+    </section>
   );
 }
