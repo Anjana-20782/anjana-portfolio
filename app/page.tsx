@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -16,6 +17,12 @@ export default function Home() {
       <section id="services" className="scroll-mt-20">
         <Services />
       </section>
+
+{/* exprience Section */}
+    <section id="experience" className="scroll-mt-24">
+        <Experience />
+      </section>
+
     
     </main>
   );

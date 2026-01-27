@@ -19,7 +19,9 @@ export default function Navbar() {
       <li className="hover:text-white cursor-pointer transition">
     <a href="#services">Services</a>
   </li>
-        <li className="hover:text-white cursor-pointer transition">Experience</li>
+        <li className="hover:text-white cursor-pointer transition">
+          <a href="#experience">Experience</a>
+        </li>
         <li className="hover:text-white cursor-pointer transition">Skills</li>
         <li className="hover:text-white cursor-pointer transition">Projects</li>
         <li className="hover:text-white cursor-pointer transition">Contact</li>
