@@ -77,7 +77,7 @@ export default function Experience() {
                   {exp.description.map((point, i) => (
                     <li key={i} className="flex items-start gap-3 group">
                       <span className="text-purple-500 mt-1.5 font-bold text-xs">➔</span>
-                      <p className="text-slate-900 dark:text-slate-300 leading-relaxed group-hover:text-purple-400 transition-colors">
+                      <p className="text-slate-900 dark:text-slate-500 leading-relaxed group-hover:text-purple-400 transition-colors">
                         {point}
                       </p>
                     </li>
