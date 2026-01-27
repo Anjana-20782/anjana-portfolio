@@ -36,3 +36,22 @@ export default function Hero() {
         direction="top"
         className="text-5xl md:text-6xl font-serif leading-tight"
       />
+
+      {/* Typewriter Paragraph Effect */}
+      <div className="text-[color:var(--muted)] max-w-xl mt-6 min-h-[60px]">
+        <TextType
+          text={[
+            "I am a MERN Stack Developer. I develop full-stack web applications using MongoDB, Express.js, React.js, and Node.js."
+          ]}
+          typingSpeed={40}
+          pauseDuration={3000}
+          loop={true}
+          showCursor={true}
+          cursorCharacter="|"
+          className="text-lg"
+        />
+      </div>
+
+     
+  );
+}
