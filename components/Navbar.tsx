@@ -4,7 +4,7 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-10 py-6">
+    <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 bg-[color:var(--background)]/80 backdrop-blur-md ">
       
       {/* Logo */}
       <h1 className="text-xl font-bold">

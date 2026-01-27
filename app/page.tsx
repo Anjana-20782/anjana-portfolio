@@ -4,7 +4,7 @@ import Services from "@/components/Services";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-32 md:pt-40">
       <Navbar />
 
       {/* about section */}
