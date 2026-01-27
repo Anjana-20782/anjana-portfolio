@@ -73,7 +73,7 @@ export default function Services() {
             <div className="text-3xl text-purple-600 dark:text-purple-400 mb-5 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
               {service.icon}
             </div>
-            <h4 className="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-purple-500 transition-colors">
+            <h4 className="text-xl font-bold mb-3 text-[color:var(--foreground)] group-hover:text-purple-500 transition-colors">
               {service.title}
             </h4>
             <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">
