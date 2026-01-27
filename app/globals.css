@@ -1,23 +1,15 @@
 @import "tailwindcss";
 
-/* ---------- LIGHT MODE (DEFAULT) ---------- */
+/* Light theme (default) */
 :root {
-  --background: #f8fafc;      /* soft light gray */
-  --foreground: #0f172a;      /* dark slate (main text) */
-
-  --muted: #475569;           /* secondary text */
-  --border: #cbd5e1;          /* borders */
-  --accent: #9333ea;          /* purple accent */
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-/* ---------- DARK MODE ---------- */
+/* Dark theme */
 .dark {
-  --background: #0b0218;      /* your dark bg */
-  --foreground: #f8fafc;
-
-  --muted: #9ca3af;
-  --border: #4b5563;
-  --accent: #c084fc;
+  --background: #0b0218;
+  --foreground: #ededed;
 }
 
 body {
