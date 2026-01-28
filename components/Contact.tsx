@@ -13,7 +13,7 @@ export default function Contact() {
 
     if (!form.current) return;
 
-    // Replace these three strings with your actual EmailJS IDs
+    // Using your updated EmailJS IDs
     emailjs.sendForm(
       'service_nlk22yi', 
       'template_zbh2khr', 
@@ -53,10 +53,14 @@ export default function Contact() {
     },
   ];
 
+  // Updated style for better border visibility in Light Mode
   const inputStyle = `
-    w-full bg-transparent border border-purple-200 dark:border-white/10 
-    rounded-xl px-4 py-3 outline-none focus:border-purple-500 
+    w-full bg-white/50 dark:bg-transparent 
+    border border-gray-400 dark:border-white/20 
+    rounded-xl px-4 py-3 outline-none 
+    focus:border-purple-500 focus:ring-1 focus:ring-purple-500
     text-[color:var(--foreground)] transition-all
+    placeholder:text-gray-500 dark:placeholder:text-gray-400
   `;
 
   return (
@@ -99,20 +103,20 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Side: Contact Form */}
-          <SpotlightCard className="bg-[#f8f5ff] dark:bg-[#12071f]/40 border-purple-100 dark:border-white/10 shadow-xl">
+          {/* Right Side: Contact Form - Updated background for contrast */}
+          <SpotlightCard className="bg-[#f3eeff] dark:bg-[#12071f]/20 border-purple-400 dark:border-white/10 shadow-xl">
             <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input 
                   type="text" 
-                  name="from_name" // Match your EmailJS template
+                  name="from_name" 
                   placeholder="Enter your name" 
                   required 
                   className={inputStyle} 
                 />
                 <input 
                   type="email" 
-                  name="user_email" // Match your EmailJS template
+                  name="user_email" 
                   placeholder="Enter your email" 
                   required 
                   className={inputStyle} 
