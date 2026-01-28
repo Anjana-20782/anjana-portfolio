@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SpotlightCard from "./SpotlightCard"; // Import the new component
+import SpotlightCard from "./SpotlightCard";
 import { 
   SiJavascript, SiTypescript, SiMongodb, SiPostgresql, SiMysql,
   SiNextdotjs, SiReact, SiHtml5, SiCss3, SiTailwindcss, SiBootstrap,
@@ -12,43 +12,43 @@ const skillGroups = [
   {
     category: "Programming Languages",
     skills: [
-      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
-      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" />, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" />, url: "https://www.typescriptlang.org/" },
     ],
   },
   {
     category: "Frontend Development",
     skills: [
-      { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white" /> },
-      { name: "React.js", icon: <SiReact className="text-cyan-400" /> },
-      { name: "HTML", icon: <SiHtml5 className="text-orange-500" /> },
-      { name: "CSS", icon: <SiCss3 className="text-blue-600" /> },
-      { name: "Tailwind", icon: <SiTailwindcss className="text-sky-400" /> },
-      { name: "Bootstrap", icon: <SiBootstrap className="text-purple-600" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white" />, url: "https://nextjs.org/" },
+      { name: "React.js", icon: <SiReact className="text-cyan-400" />, url: "https://react.dev/" },
+      { name: "HTML", icon: <SiHtml5 className="text-orange-500" />, url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+      { name: "CSS", icon: <SiCss3 className="text-blue-600" />, url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+      { name: "Tailwind", icon: <SiTailwindcss className="text-sky-400" />, url: "https://tailwindcss.com/" },
+      { name: "Bootstrap", icon: <SiBootstrap className="text-purple-600" />, url: "https://getbootstrap.com/" },
     ],
   },
   {
     category: "Backend Development",
     skills: [
-      { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
-      { name: "Express.js", icon: <SiExpress className="text-gray-400" /> },
+      { name: "Node.js", icon: <SiNodedotjs className="text-green-500" />, url: "https://nodejs.org/" },
+      { name: "Express.js", icon: <SiExpress className="text-gray-400" />, url: "https://expressjs.com/" },
     ],
   },
   {
     category: "Database Management",
     skills: [
-      { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
-      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
-      { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
+      { name: "MongoDB", icon: <SiMongodb className="text-green-600" />, url: "https://www.mongodb.com/" },
+      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" />, url: "https://www.postgresql.org/" },
+      { name: "MySQL", icon: <SiMysql className="text-blue-500" />, url: "https://www.mysql.com/" },
     ],
   },
   {
     category: "Tools & Others",
     skills: [
-      { name: "Git", icon: <SiGit className="text-orange-600" /> },
-      { name: "GitHub", icon: <SiGithub className="text-black dark:text-white" /> },
-      { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
-      { name: "Linux", icon: <SiLinux className="text-yellow-500" /> },
+      { name: "Git", icon: <SiGit className="text-orange-600" />, url: "https://git-scm.com/" },
+      { name: "GitHub", icon: <SiGithub className="text-black dark:text-white" />, url: "https://github.com/" },
+      { name: "Postman", icon: <SiPostman className="text-orange-500" />, url: "https://www.postman.com/" },
+      { name: "Linux", icon: <SiLinux className="text-yellow-500" />, url: "https://www.linux.org/" },
     ],
   },
 ];
@@ -66,29 +66,33 @@ export default function Skills() {
           {skillGroups.map((group, idx) => (
             <SpotlightCard 
               key={idx} 
-              // We pass your existing styles to the custom component
               className="border-purple-500/10 bg-white/40 dark:bg-white/5 backdrop-blur-md"
-              spotlightColor="rgba(168, 85, 247, 0.15)" // Subtle purple glow
+              spotlightColor="rgba(168, 85, 247, 0.15)"
             >
               <h4 className="text-lg font-bold mb-6 text-[color:var(--foreground)] border-b border-purple-500/10 pb-2">
                 {group.category}
               </h4>
               <div className="grid grid-cols-3 gap-6">
                 {group.skills.map((skill, i) => (
-                  <div key={i} className="flex flex-col items-center group">
+                  <a 
+                    key={i} 
+                    href={skill.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex flex-col items-center group cursor-pointer"
+                  >
                     <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
                       {skill.icon}
                     </div>
                     <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-tighter text-center">
                       {skill.name}
                     </span>
-                  </div>
+                  </a>
                 ))}
               </div>
             </SpotlightCard>
           ))}
 
-          {/* Concepts Card also using Spotlight */}
           <SpotlightCard 
             className="border-purple-500/10 bg-purple-500/5 backdrop-blur-md flex flex-col justify-center items-center"
             spotlightColor="rgba(168, 85, 247, 0.2)"
