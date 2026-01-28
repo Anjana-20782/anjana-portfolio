@@ -25,8 +25,12 @@ export default function Navbar() {
         <li className="hover:text-white cursor-pointer transition">
           <a href="#skills">Skills</a>
         </li>
-        <li className="hover:text-white cursor-pointer transition">Projects</li>
-        <li className="hover:text-white cursor-pointer transition">Contact</li>
+        <li className="hover:text-white cursor-pointer transition">
+          <a href="#projects">Projects</a>
+        </li>
+        <li className="hover:text-white cursor-pointer transition">
+          <a href="#contacts">Contact</a>
+        </li>
       </ul>
 
       {/* Right Side */}
